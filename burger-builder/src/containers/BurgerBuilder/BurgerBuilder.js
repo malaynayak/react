@@ -27,7 +27,7 @@ class BurgerBuilder extends Component {
     }
 
     componentDidMount() {
-        axios.get('https://react-burger-builder-29acf.firebaseio.com/ingredients')
+        axios.get('https://react-burger-builder-29acf.firebaseio.com/ingredients.json')
             .then(response => {
                 this.setState({
                     ingredients: response.data
@@ -95,38 +95,16 @@ class BurgerBuilder extends Component {
     }
 
     purchaseContinueHandler = () => {
-        this.setState({
-            loading: true
-        })
-        const order = {
-            ingredients : this.state.ingredients,
-            price: this.state.totalPrice,
-            customer: {
-                name: 'John Doe',
-                address: {
-                    street: 'Test Street',
-                    zipCode: '123456',
-                    country: 'US'
-                },
-                email: 'jdoe@test.com'
-            },
-            deliveryMethod: 'standard'
-        };
-        axios.post('/orders.json', order)
-            .then(response => {
-                console.log(response);
-                this.setState({
-                    loading: false,
-                    purchasing: false
-                });
-            })
-            .catch(error => {
-                console.log(error);
-                this.setState({
-                    loading: false,
-                    purchasing: false
-                });
-            });
+        const queryParams = [];
+        for (let i in this.state.ingredients) {
+            queryParams.push(encodeURIComponent(i) + '=' + encodeURIComponent(this.state.ingredients[i]));
+        }
+        queryParams.push('price=' + this.state.totalPrice);
+        const queryString = queryParams.join('&')
+        this.props.history.push({
+            pathname: '/checkout',
+            search: '?' + queryString
+        });
     }
 
     render () {
@@ -167,7 +145,9 @@ class BurgerBuilder extends Component {
 
         return (
             <Aux>
-                <Modal show={this.state.purchasing} modalClosed={this.purchaseCancelHandeler}>
+                <Modal 
+                    show={this.state.purchasing} 
+                    modalClosed={this.purchaseCancelHandeler}>
                     {orderSummary}
                 </Modal>
                 { burger }
