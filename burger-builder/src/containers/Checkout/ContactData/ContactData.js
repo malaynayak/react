@@ -158,7 +158,7 @@ class ContactData extends Component {
             })
         }
         let form  = (
-            <form onSubmit={this.orderHandelers}>
+            <form onSubmit={this.orderHandeler}>
                 {
                     formsElementsArray.map(formElement => (
                         <Input 
