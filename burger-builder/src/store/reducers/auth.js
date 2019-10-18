@@ -8,7 +8,7 @@ const defaultState = {
     loading: false
 };
 
-const reducer = (state=defaultState, action) => {
+const reducer = (state = defaultState, action) => {
     switch(action.type) {
         case actionTypes.AUTH_START:
             return {
