@@ -6,7 +6,7 @@ const Link = ({ active, type, children, onClick }) => (
     <button
         className={[classes.Button, classes[type]].join(' ')}
         onClick={onClick}
-        disabled={active}
+        disabled={!active}
     >
         {children}
     </button>

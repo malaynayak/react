@@ -12,7 +12,7 @@ const TodoList = ({ todos, toggleTodo }) => {
         </ul>
     );
     if (!todos.length) {
-        list = <div className={classes.Empty}>Nothing to do!</div>
+        list = <div className={classes.Empty}>Nothing Here!</div>
     }
     return (
         <div className={classes.TodoList}>
