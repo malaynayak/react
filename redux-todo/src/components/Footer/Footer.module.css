@@ -1,0 +1,6 @@
+.Footer {
+    padding: 5%;
+    border-top: 1px solid #D35400;
+    display: flex;
+    justify-content: center;
+}

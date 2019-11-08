@@ -1,0 +1,8 @@
+.Todo {
+    padding: 4px;
+    background-color: #F5CBA7;
+    border-bottom: 1px solid #DC7633
+}
+.Completed {
+    text-decoration: line-through;
+}

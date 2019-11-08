@@ -1,0 +1,25 @@
+.Button {
+    background-color: #2C3E50;
+    border: none;
+    color: #FFF;
+    outline: none;
+    cursor: pointer;
+    font: inherit;
+    padding: 10px;
+    margin: 10px;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+.Button:disabled {
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+.Success {
+    background-color: #5C9210;
+}
+
+.Danger {
+    background-color: #944317;
+}

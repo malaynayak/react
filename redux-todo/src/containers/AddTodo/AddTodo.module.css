@@ -1,0 +1,41 @@
+.Wrapper {
+    padding: 5%;
+    border-bottom:1px solid #D35400;
+}
+.Form {
+    display: flex;
+    justify-content: center;
+}
+.Input {
+    padding: 10px;
+    box-sizing: border-box;
+    flex-grow: 2;
+}
+.InputElement {
+    outline: none;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    font: inherit;
+    padding: 8px 5px;
+    display: block;
+    box-sizing: border-box;
+    width:100%;
+}
+
+.InputElement:focus {
+    outline: none;
+    background-color: #ccc;
+}
+
+.Submit {
+    background-color: #2C3E50;
+    border: none;
+    color: #FFF;
+    outline: none;
+    cursor: pointer;
+    font: inherit;
+    padding: 10px;
+    margin: auto;
+    font-weight: bold;
+    border-radius: 3px;
+}

@@ -1,0 +1,14 @@
+.TodoList {
+    height: 370px;
+    overflow: auto;
+    margin: 10px;
+}
+.List {
+    list-style: none;
+    padding: 0 30px;
+}
+.Empty {
+    margin:0 30px;
+    padding: 4px;
+    background-color: #F5CBA7;
+}
