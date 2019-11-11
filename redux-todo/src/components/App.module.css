@@ -4,7 +4,8 @@
     font-family: 'Josefin Sans', sans-serif;
 }
 .Wrapper{
-    height: 600px;
+    min-height: 600px;
+    height: auto;
 	width: 400px;
 	position: absolute;
 	top: 50%;
@@ -14,4 +15,13 @@
     background: #DC7633;
     transform: translate(-50%, -50%);
     box-shadow: 3px 5px 20px 0px #000;
+}
+.Header{
+    text-align: center;
+    border-bottom: 1px solid #D35400;
+}
+.Header  h1 {
+    font-size: 28px;
+    margin: 14px 0;
+    color:#17202A
 }

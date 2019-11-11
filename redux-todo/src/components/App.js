@@ -8,6 +8,7 @@ import classes from './App.module.css'
 const App = () => (
   <div className={classes.Container}>
     <div className={classes.Wrapper}>
+      <div className={classes.Header}><h1>Todos</h1></div>
       <AddTodo />
       <VisibleTodoList />
       <Footer />
